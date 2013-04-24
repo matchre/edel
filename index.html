@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>Le jeu de Edel</title>
+		<link type="text/css" rel="stylesheet" href="edel.css"/>
+		<!--[if lte IE 8]>
+			<script type="text/javascript" src="aight.js"></script>
+		<![endif]-->	
+		<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="jsrender.js"></script>
+		<script type="text/javascript" src="edel.js"></script>
+		<script id="edel-grid-template" type="text/x-jsrender">
+			<table>
+				<tr>
+					<td></td>
+					{{for cols}}
+						<td class="edel-cols">
+							{{for #data}}
+								{{if #index != 0}}
+									<br/>
+								{{/if}}
+								{{:#data}}
+							{{/for}}
+						</td>
+					{{/for}}
+				</tr>
+				{{for mdata ~lines = lines}}
+					<tr>
+						<td class="edel-lines">
+							{{for ~lines[#index]}}
+								{{:#data}}
+							{{/for}}
+						</td>
+						{{for #data ~y=#index + 1}}
+							<td data-x="{{:#index}}" data-y="{{:~y - 1}}" class="edel-cell edel-cell-{{:#data.guessed ? (#data.error ? "error" : "correct"): "unknown"}}">
+								{{if #data.guessed}}
+									{{if !#data.on}}
+										<img src="croix15.png"/>
+									{{/if}}
+								{{/if}}
+							</td>
+						{{/for}}
+					</tr>
+				{{/for}}
+			</table>
+		</script>
+	</head>
+	<body>
+		<div id="edel">
+			<div id="edel-ingame">
+				<div class="first-box-container">
+					<div id="edel-grid" class="containee">
+					</div>
+				</div>
+				<div class="second-box-container">
+					<div id="edel-controls" class="containee">
+						Progression
+						<div id="edel-progress">
+							<div id="edel-progress-bar">
+							</div>
+						</div>
+						Erreurs
+						<div id="edel-error">
+							<div id="edel-error-bar">
+							</div>
+						</div>
+						<br/>
+						<button onclick="edel.hintPlease();" id="edel-hint-button">Indice</button>
+						<br/>
+						<button onclick="edel.goToLobby();">Nouveau</button>
+					</div>
+					<div id="edel-wingame" class="containee">
+						Vous avez gagné !
+						<br/>
+						<br/>
+						<button onclick="edel.goToLobby();">Nouveau</button>
+					</div>
+					<div id="edel-losegame" class="containee">
+						Vous avez perdu...
+						<br/>
+						<br/>
+						<button onclick="edel.retry();">Recommencer</button>
+						<br/>
+						<button onclick="edel.showSolution();">Solution</button>
+						<br/>
+						<button onclick="edel.goToLobby();">Nouveau</button>
+					</div>
+				</div>
+			</div>
+			<div class="first-box-container">
+				<div id="edel-newgame" class="containee">
+					<form id="edel-size">
+						Choisir une taille<br/><br/>
+						<input type="radio" id="edel-size-0" name="size" value="0" checked="checked">
+						<label for="edel-size-0">Petite (10x10)</label>
+						<br/>
+						<input type="radio" id="edel-size-1" name="size" value="1">
+						<label for="edel-size-1">Moyenne (15x15)</label>
+						<br/>
+						<input type="radio" id="edel-size-2" name="size" value="2">
+						<label for="edel-size-2">Grande (20x20)</label>
+					</form>
+					<br/>
+					<button onclick="edel.newGame()">Jouer !</button>
+				</div>
+			</div>
+		</div>
+		<div id="edel-rules">
+			<h1>Règle du jeu Edel</h1>
+			<p>
+				Comment jouer ? Tout d'abord choisissez une taille de grille.
+			</p>
+			<p>
+				Au départ les cases sont toutes vides. Le but du jeu est de les colorier en vous aidant des nombrs indiqués pour chaque ligne et chaque colonne de la grille. Par exemple lorsqu'il y a noté "5 4 2 1", cela signifie que vous aurez sur la ligne correspondante un bloc de 5 cases consécutives puis un bloc de 4 cases puis 2 puis une. L'ordre des nombres est le même que l'ordre des blocs de cases.
+			</p>
+			<p>
+				Aidez-vous de ces indications horizontales et verticales pour réussir à remplir toutes les cases. Vous verrez alors apparaître à la fin le dessin de la grille formé par les cases colorées.
+			</p>
+			<p>
+				Pour jouer utilisez le clic gauche pour colorier un case et le clic droit pour mettre une croix.
+			</p>
+			<p>
+				Les deux jauges à droite vous indiquent le pourcentage de cases que vous avez correctement coloriéees et la quantité d'erreurs commises. Lorsque vous avez commis trop d'erreurs vous perdez la partie.
+			</p>
+			<p>
+				Bonne chance !
+			</p>
+		</div>
+	</body>
+</html>

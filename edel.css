@@ -1,0 +1,108 @@
+#edel{
+	background-image: url("background.png");
+	width: 850px;
+	height: 585px;
+	position: relative;
+}
+
+/* Style to position the content in the two boxes */
+
+#edel .first-box-container{
+	position: relative;
+	left: 89px;
+	width: 443px;
+	top: 45px;
+	height: 496px;
+	text-align: center;
+	line-height:496px;
+}
+#edel .first-box-container div.containee{
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 1.231;
+}
+
+#edel .second-box-container{
+	position: absolute;
+	left: 563px;
+	width: 218px;
+	top: 45px;
+	height: 195px;
+	text-align: center;
+	line-height:195px;
+}
+#edel .second-box-container div.containee{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.231;
+}
+
+#edel .second-box-container button{
+	width: 100px;
+}
+
+
+
+#edel #edel-newgame{
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #999;
+}
+
+
+
+/* Style for the grid */
+
+#edel #edel-grid table{
+	font-size: 12px;
+	border-spacing: 1px;
+	border-collapse: collapse;
+}
+#edel .edel-cell{
+	height: 14px;
+	width: 14px;
+	padding: 0px;
+	border: 1px solid white;
+	line-height: 0px;
+}
+#edel .edel-cols{
+	width: 14px;
+	vertical-align: bottom;
+	text-align: center;
+}
+#edel .edel-lines{
+	height: 14px;
+	text-align: right;
+}
+
+/* The differents cell status */
+
+#edel .edel-cell-unknown{
+	background-color: rgb(153,204,102);
+}
+#edel .edel-cell-unknown:hover{
+	background-color: rgb(123,164,82);
+}
+#edel .edel-cell-correct{
+	background-color: #888;
+}
+#edel .edel-cell-error{
+	background-color: rgb(249, 66, 66);
+}
+
+
+
+
+
+/* Bars */
+#edel #edel-progress, #edel #edel-error{
+	height: 20px;
+	width: 200px;
+	border: 1px solid black;
+	display: inline-block;
+}
+#edel #edel-progress-bar, #edel #edel-error-bar{
+	height: 20px;
+	background-color: #ccc;
+	display: inline-block;
+}
