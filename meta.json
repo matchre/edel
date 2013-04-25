@@ -16,6 +16,11 @@
 "comment" : "version initiale en Java"
 },
 {
+"name" : "Wallez, Corentin",
+"role" : "auteur",
+"comment" : "version HTLM5/JS"
+},
+{
 "name" : "Lenté, Christophe",
 "role" : "auteur",
 "comment" : "co-concepteur"
