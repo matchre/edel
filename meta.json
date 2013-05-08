@@ -3,6 +3,7 @@
 "width": "950px",
 "height": "1000px",
 "comment" : "Un jeu de réflexion où reconstituer un dessin caché sous une grille en s’appuyant sur des indices numériques, permet de cotoyer l'optimisation combinatoire",
+"link" : "http://interstices.info/jeu-edel",
 "links" : [
 {
 "title" : "Document original dans lequel ce grain s'insère",
