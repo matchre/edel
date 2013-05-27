@@ -1,56 +1,56 @@
 {
-"name": "Jeu d'Edel",
-"width": "950px",
-"height": "1000px",
-"comment" : "Un jeu de réflexion où reconstituer un dessin caché sous une grille en s’appuyant sur des indices numériques, permet de cotoyer l'optimisation combinatoire",
-"link" : "http://interstices.info/jeu-edel",
-"links" : [
-{
-"title" : "Document original dans lequel ce grain s'insère",
-"uri" : "http://interstices.info/jeu-edel"
-}
-],
-"authors" : [
-{
-"name" : "Bui, Chi Thanh",
-"role" : "auteur",
-"comment" : "version initiale en Java"
-},
-{
-"name" : "Wallez, Corentin",
-"role" : "auteur",
-"comment" : "version HTLM5/JS"
-},
-{
-"name" : "Lenté, Christophe",
-"role" : "auteur",
-"comment" : "co-concepteur"
-},
-{
-"name" : "Kergosien, Yannick",
-"role" : "auteur",
-"comment" : "co-concepteur"
-},
-{
-"name" : "Billaut, Jean-Charles",
-"role" : "auteur",
-"comment" : "co-concepteur"
-},
-{
-"name" : "http://www.xprojets.com/",
-"role" : "producteur"
-}
-],
-"licenses" : [
-{
-"name" : "CC BY-NC-SA",
-"uri" : "http://creativecommons.org/licenses/by-nc-sa/3.0/fr",
-"comment" : "s'applique aux documents"
-},
-{
-"name" : "CeCILL-C",
-"uri" : "http://www.cecill.info/licences/Licence_CeCILL-C_V1-fr.html",
-"comment" : "s'applique au code source"
-}
-]
+    "name": "Jeu d'Edel",
+    "width": "950px",
+    "height": "1000px",
+    "comment": "Un jeu de réflexion où reconstituer un dessin caché sous une grille en s’appuyant sur des indices numériques, permet de cotoyer l'optimisation combinatoire",
+    "link": "http://interstices.info/jeu-edel",
+    "links": [
+        {
+            "title": "Document original dans lequel ce grain s'insère",
+            "uri": "http://interstices.info/jeu-edel"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Bui, Chi Thanh",
+            "role": "auteur",
+            "comment": "version initiale en Java"
+        },
+        {
+            "name": "Wallez, Corentin",
+            "role": "auteur",
+            "comment": "version HTLM5/JS"
+        },
+        {
+            "name": "Lenté, Christophe",
+            "role": "auteur",
+            "comment": "co-concepteur"
+        },
+        {
+            "name": "Kergosien, Yannick",
+            "role": "auteur",
+            "comment": "co-concepteur"
+        },
+        {
+            "name": "Billaut, Jean-Charles",
+            "role": "auteur",
+            "comment": "co-concepteur"
+        },
+        {
+            "name": "http://www.xprojets.com/",
+            "role": "producteur"
+        }
+    ],
+    "licenses": [
+        {
+            "name": "CC BY-NC-SA",
+            "uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/fr",
+            "comment": "s'applique aux documents"
+        },
+        {
+            "name": "CeCILL-C",
+            "uri": "http://www.cecill.info/licences/Licence_CeCILL-C_V1-fr.html",
+            "comment": "s'applique au code source"
+        }
+    ]
 }
